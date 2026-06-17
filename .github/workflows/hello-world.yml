@@ -4,9 +4,7 @@ jobs:
     hello-world-actions:
     runs-on: ubuntu-latest
     steps:
-        name: Hello World Step
+        - name: Hello World Step
           run: echo "Hello, World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        name: Ya Jalò Tù Step
-          run: echo "Ya jalò tù"
-        name: Messi Vikampeon Step
-          run: echo "Messi Vikampeon"
+        - run: echo "Ya jalo tu"
+        - run: echo "Messi Vekampeon del Mundo"
