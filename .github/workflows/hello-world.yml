@@ -2,8 +2,8 @@ name: Hello World Actions
 on: [push]
 jobs: 
     hello-world-actions:
-    runs-on: ubuntu-latest
-    steps:
+      runs-on: ubuntu-latest
+      steps:
         - name: Hello World Step
           run: echo "Hello, World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         - run: echo "Ya jalo tu"
