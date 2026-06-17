@@ -1,0 +1,17 @@
+name: Run Python Script
+on: [push]
+jobs:
+  runs-python-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inicio del trabajo
+        run: echo "Iniciando el trabajo de ejecución de Python"
+      - name: Clona Repositorio
+        uses: actions/checkout@v6
+      - name: Muestra archivos
+        run: ls -al
+      - name: Establece la variable de entorno
+      - name: Establece la variable de entorno USERNAME
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+      - name: Ejecuta el script de Python
+        run: python app.py
