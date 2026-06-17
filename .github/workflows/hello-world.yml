@@ -8,3 +8,13 @@ jobs:
           run: echo "Hello, World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         - run: echo "Ya jalo tu"
         - run: echo "Messi Vekampeon del Mundo"
+        - name: Crea uno archivos
+          run: touch file1.txt
+        - name: Guarda el listado de archivos
+          run: ls -al > file2.txt
+        - name: Agrega una línea al file2.txt
+          run: echo "Agrego una linea a file2.txt" >> file2.txt
+        - name: Muestra el contenido de file2.txt
+          run: cat file2.txt
+        - name: Muestra el listado de archivos
+          run: ls -al
