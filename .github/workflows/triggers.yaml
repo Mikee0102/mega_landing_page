@@ -1,0 +1,26 @@
+name: Triggers Demo
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v6
+
+      - name: Mostrar trigger activado
+        run: |
+          echo "Este workflow se ejecutó por un trigger en GitHub Actions"
+          echo "Evento: ${{ github.event_name }}"
+
+      - name: Ejecutar script de prueba
+        run: |
+          echo "Hola Mike 🚀, tu workflow está funcionando con múltiples triggers."
